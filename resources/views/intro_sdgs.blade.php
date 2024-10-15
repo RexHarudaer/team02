@@ -41,91 +41,107 @@
     </section>
 
     <section>
-        <h2>17項永續發展目標</h2>
-
+        <h2>項永續發展目標</h2>
         <div class="goal">
             <h3>目標1：消除貧窮</h3>
             <p>在全世界消除一切形式的貧窮。</p>
+            <a href="https://www.globalgoals.org/goals/1-no-poverty/"><img src="Iamge/SDGs001.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標2：消除飢餓</h3>
             <p>消除飢餓，實現糧食安全，改善營養，促進永續農業。</p>
+            <a href="https://www.globalgoals.org/goals/2-zero-hunger/"><img src="Iamge/SDGs002.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標3：良好健康與福祉</h3>
             <p>確保健康生活，促進各年齡段人群的福祉。</p>
+            <a href="https://www.globalgoals.org/goals/3-good-health-and-well-being/"><img src="Iamge/SDGs003.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標4：優質教育</h3>
             <p>確保包容性和公平的優質教育，促進終身學習機會。</p>
+            <a href="https://www.globalgoals.org/goals/4-quality-education/"><img src="Iamge/SDGs004.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標5：性別平等</h3>
             <p>實現性別平等，賦予所有女性和女孩權力。</p>
+            <a href="https://www.globalgoals.org/goals/5-gender-equality/"><img src="Iamge/SDGs005.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標6：清潔飲水和衛生設施</h3>
-            <p>確保人人可獲得水和衛生設施，並且可持續管理。</p>
+            <p>確保人人可獲得水和衛生設施，並且可持續處理</p>
+            <a href="https://www.globalgoals.org/goals/6-clean-water-and-sanitation/"><img src="Iamge/SDGs006.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標7：可負擔和清潔能源</h3>
             <p>確保所有人可獲得負擔得起、可靠、永續和現代化的能源。</p>
+            <a href="https://www.globalgoals.org/goals/7-affordable-and-clean-energy/"><img src="Iamge/SDGs007.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標8：體面工作和經濟增長</h3>
             <p>促進包容性和永續的經濟增長，實現全面且具生產性的就業。</p>
+            <a href="https://www.globalgoals.org/goals/8-decent-work-and-economic-growth/"><img src="Iamge/SDGs008.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標9：工業、創新和基礎設施</h3>
             <p>建立具韌性的基礎設施，促進包容性和永續的工業化和創新。</p>
+            <a href="https://www.globalgoals.org/goals/9-industry-innovation-and-infrastructure/"><img src="Iamge/SDGs009.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標10：減少不平等</h3>
             <p>減少國家內部和國家之間的不平等。</p>
+            <a href="https://www.globalgoals.org/goals/10-reduced-inequalities/"><img src="Iamge/SDGs010.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標11：可持續城市和社區</h3>
             <p>讓城市和人類住區具包容性、安全、韌性和永續性。</p>
+            <a href="https://www.globalgoals.org/goals/11-sustainable-cities-and-communities/"><img src="Iamge/SDGs011.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標12：責任消費和生產</h3>
             <p>確保永續消費和生產模式。</p>
+            <a href="https://www.globalgoals.org/goals/12-responsible-consumption-and-production/"><img src="Iamge/SDGs012.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標13：氣候行動</h3>
             <p>採取緊急行動應對氣候變遷及其影響。</p>
+            <a href="https://www.globalgoals.org/goals/13-climate-action/"><img src="Iamge/SDGs013.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標14：水下生命</h3>
             <p>保護和可持續利用海洋和海洋資源，促進永續發展。</p>
+            <a href="https://www.globalgoals.org/goals/14-life-below-water/"><img src="Iamge/SDGs014.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標15：陸地生態</h3>
             <p>保護、恢復和促進永續利用陸地生態系統，推動森林永續經營，並阻止生物多樣性喪失。</p>
+            <a href="https://www.globalgoals.org/goals/15-life-on-land/"><img src="Iamge/SDGs015.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標16：和平與正義</h3>
             <p>促進和平和包容的社會，為所有人提供正義，並建立有效、負責任和包容的機構。</p>
+            <a href="https://www.globalgoals.org/goals/16-peace-justice-and-strong-institutions/"><img src="Iamge/SDGs016.png" height="300" width="200"></a>
         </div>
 
         <div class="goal">
             <h3>目標17：促進目標實現的夥伴關係</h3>
             <p>強化執行手段，並振興全球可持續發展夥伴關係。</p>
+            <a href="https://www.globalgoals.org/goals/17-partnerships-for-the-goals/"><img src="Iamge/SDGs017.png" height="300" width="200"></a>
         </div>
     </section>
 
@@ -134,3 +150,5 @@
     </footer>
 </body>
 </html>
+
+

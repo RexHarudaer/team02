@@ -59,47 +59,94 @@
 </head>
 <body>
     <header>
-        <h1>可持续发展目标 (SDGs)</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">简介</a></li>
-                <li><a href="#goals">目标</a></li>
-                <li><a href="#about">关于我们</a></li>
-            </ul>
-        </nav>
+        <h1 >永續發展目標 SDGs 介紹</h1>
     </header>
     
     <main>
-        <section id="introduction">
-            <h2>简介</h2>
-            <p>可持续发展目标是全球倡议，旨在消除贫困、保护地球并确保所有人享有和平与繁荣。这些目标为2030年可持续发展议程奠定了基础。</p>
+        <section >
+            <h2>簡介</h2>
+            <p>永續發展目標是一項全球倡議，旨在消除貧困、保護地球並確保所有人享有和平與繁榮。這些目標為2030年永續發展議程奠定了基礎</p>
         </section>
         
-        <section id="goals">
-            <h2>目标</h2>
-            <ul>
-                <li>1. 消除贫困</li>
-                <li>2. 消除饥饿</li>
-                <li>3. 健康与福祉</li>
-                <li>4. 优质教育</li>
-                <li>5. 性别平等</li>
-                <li>6. 清洁饮水与卫生设施</li>
-                <li>7. 经济增长与体面工作</li>
-                <li>8. 工业、创新与基础设施</li>
-                <li>9. 减少不平等</li>
-                <li>10. 可持续城市与社区</li>
-                <li>11. 负责任消费与生产</li>
-                <li>12. 气候行动</li>
-                <li>13. 水下生物</li>
-                <li>14. 陆地生物</li>
-                <li>15. 和平与公正</li>
-                <li>16. 伙伴关系实现目标</li>
-            </ul>
-        </section>
         
-        <section id="about">
-            <h2>关于我们</h2>
-            <p>我们致力于提高人们对可持续发展目标的认识，推动社会各界共同努力实现这些目标。通过教育和行动，我们希望激励更多人参与到可持续发展中来。</p>
+        
+        <section >
+            <h2>SDGs 目標1<a href="https://futurecity.cw.com.tw/article/836" target="_blank">||消除各地一切形式的貧窮</a></span></h2>
+            <p>
+                <img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d440e1ecf.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+            <h2>SDGs 目標2<a href="https://futurecity.cw.com.tw/article/1275" target="_blank">||確保糧食安全，消除飢餓，促進永續農業</a></h2>
+            <p>                
+                <img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d482a7718.jpg" width="800">
+                   圖片來源：聯合國教科文組織
+                 </p>
+                 <h2>SDGs 目標3<a href="https://futurecity.cw.com.tw/article/1285" target="_blank">||確保及促進各年齡層健康生活與福祉</a></h2>
+                 <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d4bfbd6f6.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標4<a href="https://futurecity.cw.com.tw/article/1286" target="_blank">||確保有教無類、公平以及高品質的教育，及提倡終身學習</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d50654af8.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標5<a href="https://futurecity.cw.com.tw/article/1287" target="_blank">||實現性別平等，並賦予婦女權力</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d550ad341.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標6<a href="https://futurecity.cw.com.tw/article/1297" target="_blank">||確保所有人都能享有水、衛生及其永續管理</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d5830066a.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標7<a href="https://futurecity.cw.com.tw/article/1298" target="_blank">||確保所有的人都可取得負擔得起、可靠、永續及現代的能源</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d751c176f.jpg" width="800">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標8<a href="https://futurecity.cw.com.tw/article/1299" target="_blank">||促進包容且永續的經濟成長，讓每個人都有一份好工作</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d78c8dd83.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標9<a href="https://futurecity.cw.com.tw/article/1296" target="_blank">||建立具有韌性的基礎建設，促進包容且永續的工業，並加速創新</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d7ba19abe.jpg" width="800">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標10<a href="https://futurecity.cw.com.tw/article/1295" target="_blank">||減少國內及國家間的不平等</a></h2>
+                <p>
+                    <img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d7ee9825f.jpg" width="800">
+                    圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標11<a href="https://futurecity.cw.com.tw/article/1294" target="_blank">||建構具包容、安全、韌性及永續特質的城市與鄉村</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d82775064.jpg" width="800"><span class="source">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標12<a href="https://futurecity.cw.com.tw/article/1293" target="_blank">||促進綠色經濟，確保永續消費及生產模式</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d853f2f50.jpg" width="800"><span class="source">
+                  圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標13<a href="https://futurecity.cw.com.tw/article/1292" target="_blank">||完備減緩調適行動，以因應氣候變遷及其影響</a></h2>
+                <p><img   src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d89ee3c07.jpg" width="800"><span class="source">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標14<a href="https://futurecity.cw.com.tw/article/1291" target="_blank">||保育及永續利用海洋生態系，以確保生物多樣性並防止海洋環境劣化</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d8c71bf04.jpg" width="800"><span class="source">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標15<a href="https://futurecity.cw.com.tw/article/1290" target="_blank">||保育及永續利用陸域生態系，確保生物多樣性並防止土地劣化</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d8fd7986e.jpg" width="800"><span class="source">
+                  圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標16<a href="https://futurecity.cw.com.tw/article/1289" target="_blank">||促進和平多元的社會，確保司法平等，建立具公信力且廣納民意的體系</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d93643593.jpg" width="800">
+                   圖片來源：聯合國教科文組織
+                </p>
+                <h2>SDGs 目標17<a href="https://futurecity.cw.com.tw/article/1288" target="_blank">||建立多元夥伴關係，協力促進永續願景</a></h2>
+                <p><img  src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d96614ddb.jpg" width="800">
+                   圖片來源：聯合國教科文組織
+                </p>
+
+
+
+
+
         </section>
     </main>
     

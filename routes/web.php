@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\VegetableMarketDataController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/sdgs', function () {
-    return view('intro_sdgs');
-});
+Route::get('/VegetableMarketDataController', [VegetableMarketDataController::class, 'index']
+);
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\VegetableMarketDataModel;
 use Illuminate\Http\Request;
 
 class VegetableMarketDataController extends Controller
@@ -14,7 +15,8 @@ class VegetableMarketDataController extends Controller
     public function index()
     {
         //
-        return view('VegetableMarketData.index');
+        $VegetableMarketDataModels = VegetableMarketDataModel::all();
+        return view('VegetableMarketDataView.index',compact('VegetableMarketDataModels'));
     }
 
     /**

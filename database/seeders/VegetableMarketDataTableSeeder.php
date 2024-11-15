@@ -13,6 +13,8 @@ class VegetableMarketDataTableSeeder extends Seeder
      *
      * @return void
      */
+
+      
     public function run()
     {
         $market = array('台北一', '三重區', '宜蘭市', '桃園縣', '台中市', '溪湖鎮', '南投市', '西螺鎮', '高雄市', '台北二');
@@ -21,12 +23,14 @@ class VegetableMarketDataTableSeeder extends Seeder
         '花卉類' => ['文心蘭', '康乃馨', '百合', '唐昌蒲', '火鶴', '玫瑰', '菊花'],
         '稻米及雜糧作物' => ['甘藷', '落花生']];
        
-        for ($i=0; $i<500; $i++)
+       
+        
+        for ($i=0; $i<30; $i++)
         {
             //$name = $firstNames[array_rand($firstNames)] . ' ' . $lastNames[array_rand($lastNames)];
             $selectedType = array_rand($types);
         // 根據類別選擇相應的植物名稱
-        $selectedPlantName = $types[$selectedType][array_rand($types[$selectedType])];
+            $selectedPlantName = $types[$selectedType][array_rand($types[$selectedType])];
             $random_datetime = Carbon::now()->subMinutes(rand(1, 55));
             //$birthdate = Carbon::now()->subYears(rand(48, 60))->subMonths(rand(0, 12))->subRealDays(rand(0,31));
            // $onboarddate = Carbon::now()->subYears(rand(18, 30))->subMonths(rand(0, 12))->subRealDays(rand(0,31));
@@ -35,7 +39,7 @@ class VegetableMarketDataTableSeeder extends Seeder
                 'year' => rand(102, 105),
                 'type' => $selectedType,
                 'cate' => $selectedPlantName,
-                'plant_picture' =>rand(5, 15),
+                'plant_picture' => number_format(rand(368, 9953) / 100, 2),
                 'total_average_price' => rand(5, 15),
                 'total_yield' => rand(10000, 60000),
                 'market' => $market[array_rand($market)] ,
@@ -47,5 +51,6 @@ class VegetableMarketDataTableSeeder extends Seeder
             
         ]);
         }
+    
     }
 }

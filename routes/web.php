@@ -23,6 +23,16 @@ Route::get('/sdgs', function () {
     return view('intro_sdgs');
 });
 
+
 Route::get('vegetablemarketdata',[VegetableMarketDataController::class, 'index']);
+
+Route::resource('vegetablemarketdata', VegetableMarketDataController::class);
+Route::get('/vegetablemarketdata/{id}', [VegetableMarketDataController::class, 'show'])->name('vegetablemarketdata.show');
+
+Route::post('/store', [VegetableMarketDataController::class, 'store'])->name('store');
+Route::get('/vegetablemarket/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create');
+
+
+
 
 

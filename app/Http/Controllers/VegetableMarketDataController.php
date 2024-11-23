@@ -28,6 +28,8 @@ class VegetableMarketDataController extends Controller
     public function create()
     {
         //
+        return view('team02.create', ['hideHeader' => true]);
+
     }
 
     /**
@@ -39,6 +41,24 @@ class VegetableMarketDataController extends Controller
     public function store(Request $request)
     {
         //
+        // 驗證請求
+    $request->validate([
+        'year' => 'required',
+        'type' => 'required',
+        'cate' => 'required',
+        'plant_picture' => 'required',
+        'total_average_price' => 'required',
+        'total_yield' => 'required',
+        'market' => 'required',
+        'average_price' => 'required',
+        'yield' => 'required',
+    ]);
+
+    // 儲存數據到資料庫
+    VegetableMarketData::create($request->all());
+
+    // 返回列表頁並顯示成功訊息
+    return redirect()->route('vegetablemarketdata.index')->with('success', '數據新增成功！');
     }
 
     /**
@@ -49,7 +69,12 @@ class VegetableMarketDataController extends Controller
      */
     public function show($id)
     {
-        //
+      // 根據 ID 取得資料
+    $data = VegetableMarketData::find($id);
+    // 傳遞資料到視圖
+    //return view('team02.show', compact('data'));
+    return view('team02.show', ['data' => $data, 'hideHeader' => true]);
+
     }
 
     /**

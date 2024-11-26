@@ -1,8 +1,6 @@
-@extends('VegetableMarketDataView.app')
-
+@extends('app')
 @section('contents')
-<body>
-  <div class="container">
+  <div class="content">
     <!-- Sidebar -->
     <!--<aside class="sidebar">
       <h2>側邊欄</h2>
@@ -16,7 +14,6 @@
     <!-- Main Content -->
     
     <main class="main-content">
-      <h2></h2>
       <p>
          <table border="1">
             @foreach ( $VegetableMarketDataModels as $VegetableMarketDataModel )
@@ -36,5 +33,4 @@
       </p>
     </main>
   </div>
-</body>
 @endsection

@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('VegetableMarketDataView.app');
-});
+// Route::get('/', function () {
+   //  return view('app');
+ //});
 Route::get('/sdgs', function () {
     return view('intro_sdgs');
 });
 
 
-Route::get('/VegetableMarketDataController', [VegetableMarketDataController::class, 'index']
+Route::get('VegetableMarketDataController', [VegetableMarketDataController::class, 'index']
 );
 
 

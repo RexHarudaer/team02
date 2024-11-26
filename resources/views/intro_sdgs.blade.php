@@ -1,60 +1,12 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯合國永續發展目標 (SDGs)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        section {
-            margin: 20px;
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        .goal {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1>農業市場調查</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="http://127.0.0.1:8001/">首頁</a></li>
-        <li><a href="http://127.0.0.1:8001/VegetableMarketDataController">表格</a></li>
-        <!-- <li><a href="#">服務</a></li>
-        <li><a href="#">聯繫我們</a></li>-->
-      </ul>
-    </nav>
-  </header>
-    <header>
-        <h1>聯合國永續發展目標 (SDGs)</h1>
-        <p>17個全球永續發展的共同目標</p>
-    </header>
 
-    <section>
+  @extends('app')
+@section('sdgs')
+<main class="main-content">
+    
         <h2>什麼是SDGs？</h2>
         <p>永續發展目標（SDGs）是聯合國於2015年提出的17項全球性目標，旨在解決從貧窮到氣候變遷的各種全球挑戰，期望在2030年前達成社會、經濟與環境的全面可持續發展。</p>
-    </section>
+   
 
-    <section>
         <h2>項永續發展目標</h2>
         <div class="goal">
             <h3>目標1：消除貧窮</h3>
@@ -157,12 +109,8 @@
             <p>強化執行手段，並振興全球可持續發展夥伴關係。</p>
             <a href="https://www.globalgoals.org/goals/17-partnerships-for-the-goals/"><img src="Iamge/SDGs017.png" height="300" width="200"></a>
         </div>
-    </section>
-
-    <footer>
-        <p>來源：聯合國永續發展目標 (SDGs)</p>
-    </footer>
-</body>
-</html>
+    
+</main>
+@endsection
 
 

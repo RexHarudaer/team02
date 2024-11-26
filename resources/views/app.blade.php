@@ -137,15 +137,28 @@ td {
         padding: 10px;
     }
 }
+section {
+            margin: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .goal {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
   </style>
 </head>
 
 <body>
 <div class="flex-center">
     <div class="content">
-        @include('VegetableMarketDataView.header')
+        @include('header')
+        @yield('sdgs')
         @yield('contents')
-        @include('VegetableMarketDataView.fotter')
+        @include('footer')
     </div>    
 </div>
 </body>

@@ -16,7 +16,8 @@ class VegetableMarketDataController extends Controller
     {
         //
         $vegetablemarketdata = VegetableMarketData::all();
-        return view('vegetablemarketdata.index', compact('vegetablemarketdata'));
+        //return view('vegetablemarketdata.index', compact('vegetablemarketdata'));
+        return view('vegetablemarketdata.index', compact('vegetablemarketdata'))->with('hideHeader', true);
         //return $vegetabledata;
     }
 
@@ -28,7 +29,7 @@ class VegetableMarketDataController extends Controller
     public function create()
     {
         //
-        return view('team02.create', ['hideHeader' => true]);
+        return view('vegetablemarketdata.create', ['hideHeader' => true]);
 
     }
 
@@ -72,8 +73,7 @@ class VegetableMarketDataController extends Controller
       // 根據 ID 取得資料
     $data = VegetableMarketData::find($id);
     // 傳遞資料到視圖
-    //return view('team02.show', compact('data'));
-    return view('team02.show', ['data' => $data, 'hideHeader' => true]);
+    return view('vegetablemarketdata.show', ['data' => $data, 'hideHeader' => true]);
 
     }
 
@@ -110,4 +110,5 @@ class VegetableMarketDataController extends Controller
     {
         //
     }
+    
 }

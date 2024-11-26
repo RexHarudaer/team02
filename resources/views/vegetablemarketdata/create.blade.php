@@ -38,6 +38,4 @@
         </div>
     </form>
     <a href="{{ route('vegetablemarketdata.index') }}" style="display: block; text-align: center; margin-top: 20px;">返回列表</a>
-@endsection  
-
-
+@endsection 

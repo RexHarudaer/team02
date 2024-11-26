@@ -1,4 +1,5 @@
     <header>
+        <div class="logo">
         <h1>SDGs:ZERO HUNGER</h1>
     </header>
     <table border="1">

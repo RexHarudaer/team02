@@ -4,6 +4,7 @@
 
 @section('content')
     <h1>蔬菜市場調查資料</h1>
+    <a href="{{ route('home') }}" class="btn">首頁</a>
     <a href="{{ route('vegetablemarketdata.create') }}" class="btn">新增蔬菜數據</a>
     <table>
         <thead>
@@ -39,4 +40,9 @@
             @endforeach
         </tbody>
     </table>
+    <a href="{{ route('home') }}" style="display: block; text-align: center; margin-top: 20px;">
+        <button style="padding: 10px 20px; background-color: #4978f9; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            首頁
+        </button>
+    </a>    
 @endsection

@@ -16,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('VegetableMarketDataView.app');
+});
+Route::get('/sdgs', function () {
+    return view('intro_sdgs');
 });
 
 

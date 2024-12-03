@@ -29,6 +29,8 @@ Route::get('vegetablemarketdata',[VegetableMarketDataController::class, 'index']
 Route::resource('vegetablemarketdata', VegetableMarketDataController::class);
 
 Route::get('/vegetablemarketdata/{id}', [VegetableMarketDataController::class, 'show'])->name('vegetablemarketdata.show');
+Route::get('/vegetablemarketdata/{id}/edit', [VegetableMarketDataController::class, 'edit'])->name('vegetablemarketdata.edit');
+Route::delete('vegetablemarketdata/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->name('vegetablemarketdata.destroy');
 
 Route::post('/store', [VegetableMarketDataController::class, 'store'])->name('store');
 Route::get('/vegetablemarket/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create');

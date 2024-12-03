@@ -86,6 +86,9 @@ class VegetableMarketDataController extends Controller
     public function edit($id)
     {
         //
+        $data = VegetableMarketData::find($id);
+        return view('vegetablemarketdata.edit', ['data' => $data, 'hideHeader' => true]);
+
     }
 
     /**
@@ -98,6 +101,25 @@ class VegetableMarketDataController extends Controller
     public function update(Request $request, $id)
     {
         //
+        // 驗證輸入資料
+    $validated = $request->validate([
+        'year' => 'required|string',
+        'type' => 'required|string',
+        'cate' => 'required|string',
+        'plant_picture' => 'required|string',
+        'total_average_price' => 'required|numeric',
+        'total_yield' => 'required|numeric',
+        'market' => 'required|string',
+        'average_price' => 'required|numeric',
+        'yield' => 'required|numeric',
+    ]);
+
+    // 更新指定 ID 的數據
+    $data = VegetableMarketData::findOrFail($id);
+    $data->update($validated);
+
+    // 重定向回列表頁面，並顯示成功訊息
+    return redirect()->route('vegetablemarketdata.index')->with('success', '數據更新成功！');
     }
 
     /**
@@ -108,7 +130,11 @@ class VegetableMarketDataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
+    $data = VegetableMarketData::findOrFail($id);
+    $data->delete();
+    // 重定向回列表頁面，並顯示成功訊息
+    return redirect()->route('vegetablemarketdata.index')->with('success', '資料已成功刪除！');
     }
     
 }

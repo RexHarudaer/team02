@@ -61,8 +61,8 @@ th, td {
     border: 1px solid #dbeed4; /* 邊框顏色 */
 }
 th {
-    background-color: #3498db; /* 表頭背景顏色 */
-    color: #fff; /* 表頭文字顏色 */
+    background-color: #f1fded; /* 表頭背景顏色 */
+    color: #0d0c0c; /* 表頭文字顏色 */
 }
 tr:nth-child(even) {
     background-color: #a8b4a7; /* 偶數行背景顏色 */
@@ -80,7 +80,7 @@ tr:hover {
 
 .sidebar h2 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .sidebar ul {
@@ -99,7 +99,7 @@ tr:hover {
 /* 主内容区样式 */
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   background-color: #ffffff;
 }
 

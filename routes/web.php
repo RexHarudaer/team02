@@ -23,7 +23,8 @@ Route::get('/sdgs', function () {
 });
 
 
-Route::get('VegetableMarketDataController', [VegetableMarketDataController::class, 'index']
-);
-
+Route::get('VegetableMarketDataController', [VegetableMarketDataController::class, 'index']);
+Route::get('VegetableMarketDataController/{id}', [VegetableMarketDataController::class, 'show'])->where('id','[0-9]+')->name('show');
+//Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'index'])->where('id','[0-9]+')->name(VegetableMarketDataController.edit);
+Route::delete('VegetableMarketDataModel/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->where('id','[0-9]+')->name('destroy');
 

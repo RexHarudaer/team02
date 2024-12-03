@@ -16,7 +16,8 @@ class VegetableMarketDataController extends Controller
     {
         //
         $VegetableMarketDataModels = VegetableMarketDataModel::all();
-        return view('VegetableMarketDataView.index',compact('VegetableMarketDataModels'));
+        //return view('VegetableMarketDataView.index',compact('VegetableMarketDataModels'));
+        return view('VegetableMarketDataView.index')->with('VegetableMarketDataModels',$VegetableMarketDataModels);
     }
 
     /**
@@ -48,7 +49,8 @@ class VegetableMarketDataController extends Controller
      */
     public function show($id)
     {
-        //
+        $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
+        return view('show')->with('VegetableMarketDataModels',$VegetableMarketDataModels);
     }
 
     /**
@@ -82,6 +84,8 @@ class VegetableMarketDataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
+        $VegetableMarketDataModels -> delete();
+        return redirect('VegetableMarketDataController');
     }
 }

@@ -27,7 +27,8 @@ class VegetableMarketDataController extends Controller
      */
     public function create()
     {
-        //
+       
+        return view("VegetableMarketDataView.create");
     }
 
     /**
@@ -38,7 +39,19 @@ class VegetableMarketDataController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data  = $request -> only([
+            'year',
+            'type',
+            'cate',
+            'plant_picture',
+            'total_average_price',
+            'total_yield',
+            'market',
+            'average_price',
+            'yield'
+        ]);
+        $VegetableMarketDataModels = VegetableMarketDataModel::create($data);
+        return redirect('VegetableMarketDataController');
     }
 
     /**
@@ -73,7 +86,19 @@ class VegetableMarketDataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data  = $request -> only([
+            'year' => 'required|string',
+            'type'=> 'required|string',
+            'cate'=> 'required|string',
+            'plant_picture'=> 'required|string',
+            'total_average_price'=> 'required|numeric',
+            'total_yield'=> 'required|numeric',
+            'market'=> 'required|string',
+            'average_price'=> 'required|numeric',
+            'yield'=> 'required|numeric',
+        ]);
+        $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
+        $VegetableMarketDataModels -> update($data);
     }
 
     /**

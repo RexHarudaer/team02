@@ -6,7 +6,7 @@
     <aside class="sidebar">
       <h2>側邊欄</h2>
       <ul>
-        <li><a href="#">新增</a></li>
+        <li><a href="{{route("create")}}">新增</a></li>
         <li><a href="#">刪除</a></li>
       </ul>
     </aside>

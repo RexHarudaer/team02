@@ -27,4 +27,6 @@ Route::get('VegetableMarketDataController', [VegetableMarketDataController::clas
 Route::get('VegetableMarketDataController/{id}', [VegetableMarketDataController::class, 'show'])->where('id','[0-9]+')->name('show');
 //Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'index'])->where('id','[0-9]+')->name(VegetableMarketDataController.edit);
 Route::delete('VegetableMarketDataModel/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->where('id','[0-9]+')->name('destroy');
+Route::get('VegetableMarketDataController/create', [VegetableMarketDataController::class, 'create'])->name('create');
+Route::post('VegetableMarketDataController/store',[VegetableMarketDataController::class, 'store']) -> name('store');
 

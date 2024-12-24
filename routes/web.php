@@ -32,8 +32,8 @@ Route::get('/vegetablemarketdata/{id}', [VegetableMarketDataController::class, '
 Route::get('/vegetablemarketdata/{id}/edit', [VegetableMarketDataController::class, 'edit'])->name('vegetablemarketdata.edit');
 Route::delete('vegetablemarketdata/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->name('vegetablemarketdata.destroy');
 
-Route::post('/store', [VegetableMarketDataController::class, 'store'])->name('store');
-Route::get('/vegetablemarket/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create');
+Route::post('vegetablemarketdata/store', [VegetableMarketDataController::class, 'store'])->name('vegetablemarketdata.store');
+Route::get('/vegetablemarketdata/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create');
 Route::get('/home', function () {
     return view('vegetablemarketdata.home');
 })->name('home'); 

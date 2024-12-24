@@ -43,20 +43,20 @@ class VegetableMarketDataController extends Controller
     {
         //
         // 驗證請求
-    $request->validate([
-        'year' => 'required',
-        'type' => 'required',
-        'cate' => 'required',
-        'plant_picture' => 'required',
-        'total_average_price' => 'required',
-        'total_yield' => 'required',
-        'market' => 'required',
-        'average_price' => 'required',
-        'yield' => 'required',
+        $data = $request->only([
+        'year',
+        'type',
+        'cate',
+        'plant_picture',
+        'total_average_price',
+        'total_yield',
+        'market',
+        'average_price',
+        'yield',
     ]);
 
     // 儲存數據到資料庫
-    VegetableMarketData::create($request->all());
+     $vegetablemarketdatas = VegetableMarketData::create($data);
 
     // 返回列表頁並顯示成功訊息
     return redirect()->route('vegetablemarketdata.index')->with('success', '數據新增成功！');
@@ -71,9 +71,9 @@ class VegetableMarketDataController extends Controller
     public function show($id)
     {
       // 根據 ID 取得資料
-    $data = VegetableMarketData::find($id);
+    $vegetablemarketdatas = VegetableMarketData::find($id);
     // 傳遞資料到視圖
-    return view('vegetablemarketdata.show', ['data' => $data, 'hideHeader' => true]);
+    return view('vegetablemarketdata.show', ['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
 
     }
 
@@ -86,8 +86,8 @@ class VegetableMarketDataController extends Controller
     public function edit($id)
     {
         //
-        $data = VegetableMarketData::find($id);
-        return view('vegetablemarketdata.edit', ['data' => $data, 'hideHeader' => true]);
+        $vegetablemarketdatas = VegetableMarketData::find($id);
+        return view('vegetablemarketdata.edit', ['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
 
     }
 
@@ -115,8 +115,8 @@ class VegetableMarketDataController extends Controller
     ]);
 
     // 更新指定 ID 的數據
-    $data = VegetableMarketData::findOrFail($id);
-    $data->update($validated);
+    $vegetablemarketdatas = VegetableMarketData::findOrFail($id);
+    $vegetablemarketdatas->update($validated);
 
     // 重定向回列表頁面，並顯示成功訊息
     return redirect()->route('vegetablemarketdata.index')->with('success', '數據更新成功！');
@@ -131,8 +131,8 @@ class VegetableMarketDataController extends Controller
     public function destroy($id)
     {
         // 
-    $data = VegetableMarketData::findOrFail($id);
-    $data->delete();
+    $vegetablemarketdatas = VegetableMarketData::findOrFail($id);
+    $vegetablemarketdatas->delete();
     // 重定向回列表頁面，並顯示成功訊息
     return redirect()->route('vegetablemarketdata.index')->with('success', '資料已成功刪除！');
     }

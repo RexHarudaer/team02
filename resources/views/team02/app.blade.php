@@ -44,6 +44,13 @@
             background-color: #fefefe;  
         }
     </style>
+    <style>
+        /* 調整「市場」欄的寬度，並防止文字換行 */
+        th:nth-child(7), td:nth-child(7) {
+            min-width: 30px; /* 自行調整欄位寬度 */
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
     {{-- 只在未設置 hideHeader 或 hideHeader 為 false 時載入 header --}}

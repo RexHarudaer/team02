@@ -24,25 +24,25 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($vegetablemarketdata as $data)
+            @foreach ($vegetablemarketdata as $vegetablemarketdatas)
             <tr>
-                    <td>{{ $data->year }}</td>
-                    <td>{{ $data->type }}</td>
-                    <td>{{ $data->cate }}</td>
-                    <td>{{ $data->plant_picture }}</td>
-                    <td>{{ $data->total_average_price }}</td>
-                    <td>{{ $data->total_yield }}</td>
-                    <td>{{ $data->market }}</td>
-                    <td>{{ $data->average_price }}</td>
-                    <td>{{ $data->yield }}</td>
+                    <td>{{ $vegetablemarketdatas->year }}</td>
+                    <td>{{ $vegetablemarketdatas->type }}</td>
+                    <td>{{ $vegetablemarketdatas->cate }}</td>
+                    <td>{{ $vegetablemarketdatas->plant_picture }}</td>
+                    <td>{{ $vegetablemarketdatas->total_average_price }}</td>
+                    <td>{{ $vegetablemarketdatas->total_yield }}</td>
+                    <td>{{ $vegetablemarketdatas->market }}</td>
+                    <td>{{ $vegetablemarketdatas->average_price }}</td>
+                    <td>{{ $vegetablemarketdatas->yield }}</td>
                     <td>
-                        <a href="{{ route('vegetablemarketdata.show', $data->id) }}">顯示</a>
+                        <a href="{{ route('vegetablemarketdata.show', $vegetablemarketdatas->id) }}">顯示</a>
                     </td>
                     <td>
-                        <a href="{{ route('vegetablemarketdata.edit', $data->id) }}">編輯</a>
+                        <a href="{{ route('vegetablemarketdata.edit', $vegetablemarketdatas->id) }}">編輯</a>
                     </td>
                     <td>
-                        <form action="{{ url('/vegetablemarketdata/delete', ['id' => $data->id])}}" method="post">
+                        <form action="{{ url('/vegetablemarketdata/delete', ['id' => $vegetablemarketdatas->id])}}" method="post">
                             <input class="btn btn-default" type="submit" value="刪除" />
                             @method('delete')
                             @csrf

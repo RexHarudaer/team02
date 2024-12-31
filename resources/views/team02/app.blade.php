@@ -51,6 +51,20 @@
             white-space: nowrap;
         }
     </style>
+    <style>
+        /* 調整「顯示」欄的寬度，並防止文字換行 */
+        th:nth-child(10), td:nth-child(10) {
+            min-width: 30px; /* 自行調整欄位寬度 */
+            white-space: nowrap;
+        }
+    </style>
+    <style>
+        /* 調整「編輯」欄的寬度，並防止文字換行 */
+        th:nth-child(11), td:nth-child(11) {
+            min-width: 30px; /* 自行調整欄位寬度 */
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
     {{-- 只在未設置 hideHeader 或 hideHeader 為 false 時載入 header --}}

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\VegetableMarketData;
+use App\Http\Requests\CreateArticleRequest;
 
 class VegetableMarketDataController extends Controller
 {
@@ -39,7 +40,7 @@ class VegetableMarketDataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(\App\Http\Requests\CreateArticleRequest $request)
     {
         //
         // 驗證請求
@@ -98,20 +99,20 @@ class VegetableMarketDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(\App\Http\Requests\CreateArticleRequest $request, $id)
     {
         //
         // 驗證輸入資料
-    $validated = $request->validate([
-        'year' => 'required|string',
-        'type' => 'required|string',
-        'cate' => 'required|string',
-        'plant_picture' => 'required|string',
-        'total_average_price' => 'required|numeric',
-        'total_yield' => 'required|numeric',
-        'market' => 'required|string',
-        'average_price' => 'required|numeric',
-        'yield' => 'required|numeric',
+    $validated = $request->only([
+        'year' ,
+        'type' ,
+        'cate' ,
+        'plant_picture',
+        'total_average_price' ,
+        'total_yield' ,
+        'market' ,
+        'average_price' ,
+        'yield',
     ]);
 
     // 更新指定 ID 的數據

@@ -4,6 +4,7 @@
 
 @section('content')
     <h1>編輯蔬菜數據</h1>
+    @include('message.list')
     <form action="{{ route('vegetablemarketdata.update', $vegetablemarketdatas->id) }}" method="POST" style="max-width: 400px; margin: 0 auto;">
         @csrf
         @method('PUT')
@@ -17,7 +18,7 @@
         <label for="cate">分類</label>
         <input type="text" name="cate" id="cate" value="{{ $vegetablemarketdatas->cate }}" required>
 
-        <label for="plant_picture">作物圖片</label>
+        <label for="plant_picture">作物圖片價格</label>
         <input type="text" name="plant_picture" id="plant_picture" value="{{ $vegetablemarketdatas->plant_picture }}" required>
 
         <label for="total_average_price">平均總價</label>

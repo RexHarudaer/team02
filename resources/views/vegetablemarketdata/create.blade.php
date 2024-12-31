@@ -4,6 +4,7 @@
 
 @section('content')
     <h1>新增蔬菜數據</h1>
+    @include('message.list')
    {!! Form::open(['url' => 'vegetablemarketdata/store']) !!}
    <div class="form-group">
     {!! Form::label('year','年份') !!}

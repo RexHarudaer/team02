@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\VegetableMarketDataModel;
+use App\Http\Requests\CreatDemoRequest;
 use Illuminate\Http\Request;
 
 class VegetableMarketDataController extends Controller
@@ -12,6 +13,10 @@ class VegetableMarketDataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
@@ -37,20 +42,10 @@ class VegetableMarketDataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(\App\Http\Requests\CreatDemoRequest $request)
     {
-        $data  = $request -> only([
-            'year',
-            'type',
-            'cate',
-            'plant_picture',
-            'total_average_price',
-            'total_yield',
-            'market',
-            'average_price',
-            'yield'
-        ]);
-        $VegetableMarketDataModels = VegetableMarketDataModel::create($data);
+       
+        VegetableMarketDataModel::create($request->all());
         return redirect('VegetableMarketDataController');
     }
 
@@ -74,7 +69,12 @@ class VegetableMarketDataController extends Controller
      */
     public function edit($id)
     {
-        //
+      
+
+        //$team = Team::findOrFail($id);
+       // return view('teams.edit', ['team'=>$team]);
+        $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
+        return view('edit')->with('VegetableMarketDataModels',$VegetableMarketDataModels);
     }
 
     /**
@@ -84,21 +84,25 @@ class VegetableMarketDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(\App\Http\Requests\CreatDemoRequest $request, $id)
     {
-        $data  = $request -> only([
-            'year' => 'required|string',
-            'type'=> 'required|string',
-            'cate'=> 'required|string',
-            'plant_picture'=> 'required|string',
-            'total_average_price'=> 'required|numeric',
-            'total_yield'=> 'required|numeric',
-            'market'=> 'required|string',
-            'average_price'=> 'required|numeric',
-            'yield'=> 'required|numeric',
-        ]);
         $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
-        $VegetableMarketDataModels -> update($data);
+        
+        $data  = $request -> only([
+           'year',
+            'type',
+            'cate',
+            'plant_picture',
+            'total_average_price',
+            'total_yield',
+            'market',
+            'average_price',
+            'yield'
+        ]);
+
+        $VegetableMarketDataModels->fill($data);
+        $VegetableMarketDataModels->save();
+        return redirect('VegetableMarketDataController');
     }
 
     /**

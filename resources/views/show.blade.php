@@ -1,17 +1,7 @@
 @extends('app')
 @section('contents')
     <!-- Main Content Area -->
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>側邊欄</h2>
-      <ul>
-        <li><a href="#">新增</a></li>
-        <li><a href="#">刪除</a></li>
-      </ul>
-    </aside>
-    <!-- Main Content -->
-    
+  
     <main class="main-content">
       <p>
         
@@ -39,7 +29,7 @@
                <td> {{$VegetableMarketDataModels->market }} </td>
                <td> {{$VegetableMarketDataModels->average_price }} </td>
                <td> {{$VegetableMarketDataModels->yield }} </td> 
-               <td><a href="{{route('show',['id' => $VegetableMarketDataModels->id])}}">查看</a></td>
+               <td><a href="{{route('home')}}">返回</a></td>
               </tr>          
          </table> 
       </p>

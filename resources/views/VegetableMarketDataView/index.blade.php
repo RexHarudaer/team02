@@ -3,15 +3,15 @@
     <!-- Main Content Area -->
   <div class="container">
     <!-- Sidebar -->
+    @can('admin')
     <aside class="sidebar">
       <h2>側邊欄</h2>
-      <ul>
-        <li><a href="{{route("create")}}">新增</a></li>
-        <li><a href="#">刪除</a></li>
+      <ul>  
+        <li><a href="{{route("create")}}">新增</a></li> 
       </ul>
     </aside>
     <!-- Main Content -->
-    
+      @endcan
     <main class="main-content">
       <p>
         
@@ -41,13 +41,24 @@
                <td> {{$VegetableMarketDataModel->average_price }} </td>
                <td> {{$VegetableMarketDataModel->yield }} </td> 
                <td><a href="{{route('show',['id' => $VegetableMarketDataModel->id])}}">查看</a></td>
+            
+               @can('admin')
+               <td><a href="{{route('edit',['id' => $VegetableMarketDataModel->id])}}">修改</a></td>
+              
                <td>
                  <form action="{{url('/VegetableMarketDataModel/delete',['id' => $VegetableMarketDataModel->id])}}" method="post">
                   <input class="btn btn-default" type="submit" value="刪除"/>
                   @method('delete')
                   @csrf
+                  
                  </form>
-              </tr>          
+                 @endcan
+
+                 @can('manager')
+                 <td><a href="{{route('edit',['id' => $VegetableMarketDataModel->id])}}">修改</a></td>
+                 @endcan  
+              </tr> 
+                    
             @endforeach
          </table> 
       </p>

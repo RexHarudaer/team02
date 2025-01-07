@@ -18,15 +18,24 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
    //  return view('app');
  //});
-Route::get('/sdgs', function () {
-    return view('intro_sdgs');
-});
 
+Route::get('/', function () {
+  return view('intro_sdgs');
+});
 
 Route::get('VegetableMarketDataController', [VegetableMarketDataController::class, 'index']);
 Route::get('VegetableMarketDataController/{id}', [VegetableMarketDataController::class, 'show'])->where('id','[0-9]+')->name('show');
-//Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'index'])->where('id','[0-9]+')->name(VegetableMarketDataController.edit);
-Route::delete('VegetableMarketDataModel/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->where('id','[0-9]+')->name('destroy');
-Route::get('VegetableMarketDataController/create', [VegetableMarketDataController::class, 'create'])->name('create');
-Route::post('VegetableMarketDataController/store',[VegetableMarketDataController::class, 'store']) -> name('store');
+Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'edit'])->where('id','[0-9]+')->name('edit')->middleware('can:admin');
+Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'edit'])->where('id','[0-9]+')->name('edit')->middleware('can:manager');
+Route::patch('VegetableMarketDataModel/update/{id}', [VegetableMarketDataController::class, 'update'])->where('id', '[0-9]+')->name('update')->middleware('can:admin');
 
+Route::delete('VegetableMarketDataModel/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->where('id','[0-9]+')->name('destroy')->middleware('can:admin');
+
+Route::get('VegetableMarketDataController/create', [VegetableMarketDataController::class, 'create'])->name('create')->middleware('can:admin');
+
+Route::post('VegetableMarketDataController/store',[VegetableMarketDataController::class, 'store']) -> name('store')->middleware('can:admin');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

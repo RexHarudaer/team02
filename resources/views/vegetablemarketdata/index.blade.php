@@ -4,8 +4,11 @@
 
 @section('content')
     <h1>蔬菜市場調查資料</h1>
-    <a href="{{ route('home') }}" class="btn">首頁</a>
+    <a href="{{ route('home') }}" class="btn">Home</a>
+    <a href="{{ route('homepage') }}" class="btn">標題</a>
+    @can('admin')
     <a href="{{ route('vegetablemarketdata.create') }}" class="btn">新增蔬菜數據</a>
+    @endcan
     <table>
         <thead>
             <tr>
@@ -19,8 +22,13 @@
                 <th>平均價格</th>
                 <th>產量</th>
                 <th>操作1</th>
+                @can('admin')
                 <th>操作2</th>
                 <th>操作3</th>
+                @endcan
+                @can('manager')
+                <th>操作2</th>
+                @endcan
             </tr>
         </thead>
         <tbody>
@@ -38,6 +46,7 @@
                     <td>
                         <a href="{{ route('vegetablemarketdata.show', $vegetablemarketdatas->id) }}">顯示</a>
                     </td>
+                    @can('admin')
                     <td>
                         <a href="{{ route('vegetablemarketdata.edit', $vegetablemarketdatas->id) }}">編輯</a>
                     </td>
@@ -47,7 +56,11 @@
                             @method('delete')
                             @csrf
                        </form>
-                    </td>           
+                    </td>
+                    @endcan
+                    @can('manager')
+                    <td><a href="{{ route('vegetablemarketdata.edit', $vegetablemarketdatas->id) }}">編輯</a></td>
+                    @endcan           
             </tr>
             @endforeach
         </tbody>

@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\VegetableMarketData;
 use App\Http\Requests\CreateArticleRequest;
+use Illuminate\Support\Facades\Gate;
 
 class VegetableMarketDataController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => 'index']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -86,10 +91,14 @@ class VegetableMarketDataController extends Controller
      */
     public function edit($id)
     {
+        if (!Gate::any(['admin', 'manager'])) {
+            abort(403, 'This action is unauthorized.');
+        }
+        $vegetablemarketdatas = VegetableMarketData::findOrFail($id);
+        return view('vegetablemarketdata.edit',['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
         //
         $vegetablemarketdatas = VegetableMarketData::find($id);
         return view('vegetablemarketdata.edit', ['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
-
     }
 
     /**

@@ -24,24 +24,27 @@ Route::get('/sdgs', function () {
 });
 
 
-Route::get('vegetablemarketdata',[VegetableMarketDataController::class, 'index']);
+Route::get('/vegetablemarketdata',[VegetableMarketDataController::class, 'index']);
 
 Route::resource('vegetablemarketdata', VegetableMarketDataController::class);
 
-Route::get('/vegetablemarketdata/{id}', [VegetableMarketDataController::class, 'show'])->name('vegetablemarketdata.show');
-Route::get('/vegetablemarketdata/{id}/edit', [VegetableMarketDataController::class, 'edit'])->name('vegetablemarketdata.edit');
-Route::delete('vegetablemarketdata/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->name('vegetablemarketdata.destroy');
+Route::get('vegetablemarketdata/{id}', [VegetableMarketDataController::class, 'show'])->name('vegetablemarketdata.show');
 
-Route::post('vegetablemarketdata/store', [VegetableMarketDataController::class, 'store'])->name('vegetablemarketdata.store');
-Route::get('/vegetablemarketdata/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create');
+Route::get('vegetablemarketdata/{id}/edit', [VegetableMarketDataController::class, 'edit'])->name('vegetablemarketdata.edit');
+
+Route::delete('vegetablemarketdata/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->name('vegetablemarketdata.destroy')->middleware('can:admin');
+
+Route::post('vegetablemarketdata/store', [VegetableMarketDataController::class, 'store'])->name('vegetablemarketdata.store')->middleware('can:admin');
+Route::get('vegetablemarketdata/create', [VegetableMarketDataController::class, 'create'])->name('vegetablemarketdata.create')->middleware('can:admin');
+
 Route::get('/home', function () {
     return view('vegetablemarketdata.home');
 })->name('home'); 
 
+Route::get('/homepage', function () {
+    return view('vegetablemarketdata.homepage');
+})->name('homepage');
 
+Auth::routes();
 
-
-
-
-
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -45,6 +45,7 @@
    <div class="form-group">
     {!! Form::submit("新增蔬菜資料", ['class'=>'btn btn-primary from-control']) !!}
    </div>
+   
    {!! Form::close() !!}
    <a href="{{ route('vegetablemarketdata.index') }}" style="display: block; text-align: center; margin-top: 20px;">返回列表</a>
 @endsection 

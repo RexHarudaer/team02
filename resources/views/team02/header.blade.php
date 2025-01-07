@@ -1,7 +1,13 @@
     <header>
         <div class="logo">
         <h1>SDGs:ZERO HUNGER</h1>
-    </header>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ route('home') }}" class="btn">Home</a></li>
+                <li><a href="{{ route('vegetablemarketdata.index') }}" class="btn">蔬菜市場調查資料</a></li>
+            </ul>
+        </nav>
     <table border="1">
         <thead>
         <tr>
@@ -56,3 +62,4 @@
         </tr>
         </thead>
     </table>
+    </header>

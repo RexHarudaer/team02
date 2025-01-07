@@ -28,7 +28,7 @@ class CreateArticleRequest extends FormRequest
         'type' => 'required|string|min:1|max:190'  ,
         'cate'  => 'required|string|min:1|max:190' ,
         'plant_picture' => 'required|numeric|min:300|max:10000',
-        'total_average_price' => 'required|numeric|min:800|max:14000' ,
+        'total_average_price' => 'required|numeric|min:100|max:14000' ,
         'total_yield' => 'required|numeric|min:60|max:300000' ,
         'market'  => 'required|string|min:1|max:190' ,
         'average_price' => 'required|numeric|min:1|max:26000',
@@ -60,7 +60,7 @@ class CreateArticleRequest extends FormRequest
         
         'total_average_price.required' => '平均總價為必填欄位。',
         'total_average_price.numeric'  => '平均總價必須是數字。',
-        'total_average_price.min'      => '平均總價必須至少是 800。',
+        'total_average_price.min'      => '平均總價必須至少是 100。',
         'total_average_price.max'      => '平均總價不得超過 14000。',
         
         'total_yield.required' => '總產量為必填欄位。',

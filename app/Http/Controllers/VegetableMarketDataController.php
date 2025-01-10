@@ -97,8 +97,8 @@ class VegetableMarketDataController extends Controller
         $vegetablemarketdatas = VegetableMarketData::findOrFail($id);
         return view('vegetablemarketdata.edit',['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
         //
-        $vegetablemarketdatas = VegetableMarketData::find($id);
-        return view('vegetablemarketdata.edit', ['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
+        //$vegetablemarketdatas = VegetableMarketData::find($id);
+        //return view('vegetablemarketdata.edit', ['vegetablemarketdatas' => $vegetablemarketdatas, 'hideHeader' => true]);
     }
 
     /**

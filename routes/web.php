@@ -25,9 +25,9 @@ Route::get('/', function () {
 
 Route::get('VegetableMarketDataController', [VegetableMarketDataController::class, 'index']);
 Route::get('VegetableMarketDataController/{id}', [VegetableMarketDataController::class, 'show'])->where('id','[0-9]+')->name('show');
-Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'edit'])->where('id','[0-9]+')->name('edit')->middleware('can:admin');
-Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'edit'])->where('id','[0-9]+')->name('edit')->middleware('can:manager');
-Route::patch('VegetableMarketDataModel/update/{id}', [VegetableMarketDataController::class, 'update'])->where('id', '[0-9]+')->name('update')->middleware('can:admin');
+Route::get('VegetableMarketDataController/{id}/edit', [VegetableMarketDataController::class, 'edit'])->where('id','[0-9]+')->name('edit');
+
+Route::patch('VegetableMarketDataModel/update/{id}', [VegetableMarketDataController::class, 'update'])->where('id', '[0-9]+')->name('update');
 
 Route::delete('VegetableMarketDataModel/delete/{id}', [VegetableMarketDataController::class, 'destroy'])->where('id','[0-9]+')->name('destroy')->middleware('can:admin');
 

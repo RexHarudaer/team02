@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\VegetableMarketDataModel;
 use App\Http\Requests\CreatDemoRequest;
+use Gate;
 use Illuminate\Http\Request;
 
 class VegetableMarketDataController extends Controller
@@ -69,12 +70,14 @@ class VegetableMarketDataController extends Controller
      */
     public function edit($id)
     {
-      
-
-        //$team = Team::findOrFail($id);
-       // return view('teams.edit', ['team'=>$team]);
+        if (!Gate::any(['admin', 'manager'])) {
+            abort(403, 'This action is unauthorized.');
+        }
         $VegetableMarketDataModels = VegetableMarketDataModel::findOrFail($id);
-        return view('edit')->with('VegetableMarketDataModels',$VegetableMarketDataModels);
+        return view('edit',['VegetableMarketDataModels' => $VegetableMarketDataModels, 'hideHeader' => true]);
+        //
+        $VegetableMarketDataModels = VegetableMarketDataModel::find($id);
+        return view('edit', ['VegetableMarketDataModels' => $VegetableMarketDataModels, 'hideHeader' => true]);
     }
 
     /**

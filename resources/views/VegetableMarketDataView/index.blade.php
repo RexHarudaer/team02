@@ -27,6 +27,15 @@
             <th>平均價(元/公斤)</th>
             <th>交易量(公噸)</th>
             <th>詳細</th>
+            @can("admin")
+               <th>修改</th>
+            @endcan
+            @can("manager")
+            <th>修改</th>
+             @endcan
+             @can("admin")
+             <th>刪除</th>
+             @endcan
           </tr>
             @foreach ( $VegetableMarketDataModels as $VegetableMarketDataModel )
             

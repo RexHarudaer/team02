@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>@yield('title', '蔬菜市場調查資料')</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}"> <!-- 或其他全局 CSS -->
     <style>
         /* 全局樣式 */
         body {
             font-family: Arial, sans-serif;
-            background-image: url("Iamge/flo.jpg"); 
+            background-image: url('{{ asset('Iamge/flo.jpg') }}');
             background-size: 100%;
             background-position: center;
             color: #cfbf43;
@@ -28,7 +29,7 @@
         th, td {
             padding: 12px;
             text-align: center;
-            border-bottom: 1px solid #01e0f9;
+            border-bottom: 1px solid #0126f9;
         }
 
         th {
@@ -37,7 +38,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: #4978f9;
+            background-color: #61c137;
         }
 
         tr:hover {

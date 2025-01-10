@@ -5,7 +5,7 @@
 @section('content')
     <h1>蔬菜市場調查資料</h1>
     <a href="{{ route('home') }}" class="btn">Home</a>
-    <a href="{{ route('homepage') }}" class="btn">標題</a>
+    <a href="{{ route('homepage') }}" class="btn">簡介</a>
     @can('admin')
     <a href="{{ route('vegetablemarketdata.create') }}" class="btn">新增蔬菜數據</a>
     @endcan
@@ -21,13 +21,13 @@
                 <th>市場</th>
                 <th>平均價格</th>
                 <th>產量</th>
-                <th>操作1</th>
+                <th>顯示</th>
                 @can('admin')
-                <th>操作2</th>
-                <th>操作3</th>
+                <th>編輯</th>
+                <th>刪除</th>
                 @endcan
                 @can('manager')
-                <th>操作2</th>
+                <th>編輯</th>
                 @endcan
             </tr>
         </thead>

@@ -11965,4 +11965,11 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+  body {
+    background-image: url('/Image/flo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 }

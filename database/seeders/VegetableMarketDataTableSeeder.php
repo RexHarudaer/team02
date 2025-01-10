@@ -37,8 +37,8 @@ class VegetableMarketDataTableSeeder extends Seeder
                 'total_average_price' =>number_format(rand(880, 13490) / 100, 1),
                 'total_yield' =>  rand(60, 207530),
                 'market' => $markets[array_rand($markets)],
-                'average_price' => number_format(rand(0, 26190) / 100, 1),
-                'yield' => rand(0, 63109),
+                'average_price' => number_format(rand(1, 26190) / 100, 1),
+                'yield' => rand(100, 63109),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]
